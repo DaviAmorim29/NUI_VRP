@@ -20,11 +20,15 @@ files {
 }
 
 client_script {
+  'lib/Tunnel.lua',
+   'lib/Proxy.lua',
   '@vrp/lib/utils.lua',
   'click.lua',
 }
 
 server_script {
+  'lib/Tunnel.lua',
+  'lib/Proxy.lua',
   '@vrp/lib/utils.lua',
   'server.lua'
 }
