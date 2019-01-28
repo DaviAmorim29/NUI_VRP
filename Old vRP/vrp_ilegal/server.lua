@@ -1,4 +1,8 @@
+local Tunnel = module("vrp", "lib/Tunnel")
+local Proxy = module("vrp", "lib/Proxy")
+
 vRP = Proxy.getInterface("vRP")
+vRPclient = Tunnel.getInterface("vRP","vrp_ilegal")
 
 RegisterServerEvent("desempregado")
 AddEventHandler("desempregado", function()
@@ -54,63 +58,3 @@ AddEventHandler("hacker", function()
 	vRPclient._notify(source, {"Agora você é um Hacker"})
   end
 end)
-
-
-
-
--- Lugares para caso queira adicionar mais empregos narutin --
---]]
-RegisterServerEvent("add")
-AddEventHandler("add", function()
-  local source = source
-  local user_id = vRP.getUserId({source})
-  
-  if vRP.hasGroup({user_id, "user"}) then
-	vRP.addUserGroup({user_id, "add"})
-	vRPclient._notify(source, {"Agora você é um add"})
-  end
-end)
-
-RegisterServerEvent("add")
-AddEventHandler("add", function()
-  local source = source
-  local user_id = vRP.getUserId({source})
-  
-  if vRP.hasGroup({user_id, "user"}) then
-	vRP.addUserGroup({user_id, "add"})
-	vRPclient._notify(source, {"Agora você é um add"})
-  end
-end)
-
-RegisterServerEvent("add")
-AddEventHandler("add", function()
-  local source = source
-  local user_id = vRP.getUserId({source})
-  
-  if vRP.hasGroup({user_id, "user"}) then
-	vRP.addUserGroup({user_id, "add"})
-	vRPclient._notify(source, {"Agora você é um add"})
-  end
-end)
-
-RegisterServerEvent("add")
-AddEventHandler("add", function()
-  local source = source
-  local user_id = vRP.getUserId({source})
-  
-  if vRP.hasGroup({user_id, "user"}) then
-	vRP.addUserGroup({user_id, "add"})
-	vRPclient._notify(source, {"Agora você é um add"})
-  end
-end)
-
-RegisterServerEvent("add")
-AddEventHandler("add", function()
-  local source = source
-  local user_id = vRP.getUserId({source})
-  
-  if vRP.hasGroup({user_id, "user"}) then
-	vRP.addUserGroup({user_id, "add"})
-	vRPclient._notify(source, {"Agora você é um add"})
-  end
-end)--]]

@@ -21,10 +21,10 @@ body {
 }
 
 #main-title {
-	position: absolute;
+	position: relative;
 	top: 50%;
-	left: 50%;
-	transform: translate(-50%,50%);
+	left: 64%;
+	transform: translate(-50%,100%);
 	font-size: 2.4em;
 	font-family: arvo;
 	color: #dcdde1;
