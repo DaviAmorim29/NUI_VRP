@@ -34,7 +34,6 @@ client_script {
 }
 
 server_script {
-'Proxy.lua',
   '@vrp/lib/utils.lua',
   'server.lua'
 }
