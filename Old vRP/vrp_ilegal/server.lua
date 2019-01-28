@@ -1,12 +1,6 @@
-local Tunnel = module("vrp", "lib/Tunnel")
-local Proxy = module("vrp", "lib/Proxy")
-
-vRPjb = {}
 vRP = Proxy.getInterface("vRP")
-vRPclient = Tunnel.getInterface("vRP")
-Tunnel.bindInterface("vrp_legal",vRPjb)
 
-TriggerClientEvent("desempregado")
+RegisterServerEvent("desempregado")
 AddEventHandler("desempregado", function()
   local source = source
   local user_id = vRP.getUserId({source})
@@ -17,7 +11,7 @@ AddEventHandler("desempregado", function()
   end
 end)
 
-TriggerClientEvent("ladraocarro")
+RegisterServerEvent("ladraocarro")
 AddEventHandler("ladraocarro", function()
   local source = source
   local user_id = vRP.getUserId({source})
@@ -28,7 +22,7 @@ AddEventHandler("ladraocarro", function()
   end
 end)
 
-TriggerClientEvent("traficante")
+RegisterServerEvent("traficante")
 AddEventHandler("traficante", function()
   local source = source
   local user_id = vRP.getUserId({source})
@@ -39,7 +33,7 @@ AddEventHandler("traficante", function()
   end
 end)
 
-TriggerClientEvent("traficatortuga")
+RegisterServerEvent("traficatortuga")
 AddEventHandler("traficatortuga", function()
   local source = source
   local user_id = vRP.getUserId({source})
@@ -50,7 +44,7 @@ AddEventHandler("traficatortuga", function()
   end
 end)
 
-TriggerClientEvent("hacker")
+RegisterServerEvent("hacker")
 AddEventHandler("hacker", function()
   local source = source
   local user_id = vRP.getUserId({source})
@@ -66,7 +60,7 @@ end)
 
 -- Lugares para caso queira adicionar mais empregos narutin --
 --]]
-TriggerClientEvent("add")
+RegisterServerEvent("add")
 AddEventHandler("add", function()
   local source = source
   local user_id = vRP.getUserId({source})
@@ -77,7 +71,7 @@ AddEventHandler("add", function()
   end
 end)
 
-TriggerClientEvent("add")
+RegisterServerEvent("add")
 AddEventHandler("add", function()
   local source = source
   local user_id = vRP.getUserId({source})
@@ -88,7 +82,7 @@ AddEventHandler("add", function()
   end
 end)
 
-TriggerClientEvent("add")
+RegisterServerEvent("add")
 AddEventHandler("add", function()
   local source = source
   local user_id = vRP.getUserId({source})
@@ -99,7 +93,7 @@ AddEventHandler("add", function()
   end
 end)
 
-TriggerClientEvent("add")
+RegisterServerEvent("add")
 AddEventHandler("add", function()
   local source = source
   local user_id = vRP.getUserId({source})
@@ -110,7 +104,7 @@ AddEventHandler("add", function()
   end
 end)
 
-TriggerClientEvent("add")
+RegisterServerEvent("add")
 AddEventHandler("add", function()
   local source = source
   local user_id = vRP.getUserId({source})

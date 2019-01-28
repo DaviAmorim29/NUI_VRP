@@ -1,133 +1,131 @@
 local Tunnel = module("vrp", "lib/Tunnel")
 local Proxy = module("vrp", "lib/Proxy")
 
-vRPjb = {}
 vRP = Proxy.getInterface("vRP")
-vRPclient = Tunnel.getInterface("vRP")
-Tunnel.bindInterface("vrp_legal",vRPjb)
+vRPclient = Tunnel.getInterface("vRP","vrp_legal")
 
-TriggerClientEvent("desempregado")
+RegisterServerEvent("desempregado")
 AddEventHandler("desempregado", function()
   local source = source
   local user_id = vRP.getUserId({source})
-  
+  local player = vRP.getUserSource({user_id})
   if vRP.hasGroup({user_id, "user"}) then
 	vRP.addUserGroup({user_id, "Desempregado"})
-	vRPclient._notify(source,{"Agora você é um Desempregado"})
+	vRPclient._notify(player,{"Agora você é um Desempregado"})
   end
 end)
 
-TriggerClientEvent("pescador")
+RegisterServerEvent("pescador")
 AddEventHandler("pescador", function()
   local source = source
   local user_id = vRP.getUserId({source})
-  
+  local player = vRP.getUserSource({user_id})
   if vRP.hasGroup({user_id, "user"}) then
 	vRP.addUserGroup({user_id, "Pescador"})
-	vRPclient._notify(source, {"Agora você é um Pescador"})
+	vRPclient._notify(player, {"Agora você é um Pescador"})
   end
 end)
 
-TriggerClientEvent("taxi")
+RegisterServerEvent("taxi")
 AddEventHandler("taxi", function()
   local source = source
   local user_id = vRP.getUserId({source})
-  
+  local player = vRP.getUserSource({user_id})
   if vRP.hasGroup({user_id, "user"}) then
 	vRP.addUserGroup({user_id, "Taxi"})
-	vRPclient._notify(source, {"Agora você é um Taxista"})
+	vRPclient._notify(player, {"Agora você é um Taxista"})
   end
 end)
 
-TriggerClientEvent("mecanico")
+RegisterServerEvent("mecanico")
 AddEventHandler("mecanico", function()
   local source = source
   local user_id = vRP.getUserId({source})
-  
+  local player = vRP.getUserSource({user_id})
   if vRP.hasGroup({user_id, "user"}) then
 	vRP.addUserGroup({user_id, "Mecânico"})
-	vRPclient._notify(source, {"Agora você é um Mecânico"})
+	vRPclient._notify(player, {"Agora você é um Mecânico"})
   end
 end)
 
-TriggerClientEvent("transportador")
+RegisterServerEvent("transportador")
 AddEventHandler("transportador", function()
   local source = source
   local user_id = vRP.getUserId({source})
-  
+  local player = vRP.getUserSource({user_id})
   if vRP.hasGroup({user_id, "user"}) then
 	vRP.addUserGroup({user_id, "Transportador de Valores"})
-	vRPclient._notify(source, {"Agora você é um Transportador de Valores"})
+	vRPclient._notify(player, {"Agora você é um Transportador de Valores"})
   end
 end)
 
-TriggerClientEvent("onibus")
+RegisterServerEvent("onibus")
 AddEventHandler("onibus", function()
   local source = source
   local user_id = vRP.getUserId({source})
-  
+  local player = vRP.getUserSource({user_id})
   if vRP.hasGroup({user_id, "user"}) then
 	vRP.addUserGroup({user_id, "Motorista de Ônibus"})
-	vRPclient._notify(source, {"Agora você é um Motorista de Ônibus"})
+	vRPclient._notify(player, {"Agora você é um Motorista de Ônibus"})
   end
 end)
 
-TriggerClientEvent("eletricista")
+RegisterServerEvent("eletricista")
 AddEventHandler("eletricista", function()
   local source = source
   local user_id = vRP.getUserId({source})
-  
+  local player = vRP.getUserSource({user_id})
   if vRP.hasGroup({user_id, "user"}) then
 	vRP.addUserGroup({user_id, "Eletricista"})
-	vRPclient._notify(source, {"Agora você é um Eletricista"})
+	vRPclient._notify(player, {"Agora você é um Eletricista"})
   end
 end)
 
-TriggerClientEvent("motoboy")
+RegisterServerEvent("motoboy")
 AddEventHandler("motoboy", function()
   local source = source
   local user_id = vRP.getUserId({source})
-  
+  local player = vRP.getUserSource({user_id})
   if vRP.hasGroup({user_id, "user"}) then
 	vRP.addUserGroup({user_id, "Moto Boy"})
-	vRPclient._notify(source, {"Agora você é um Moto Boy"})
+	vRPclient._notify(player, {"Agora você é um Moto Boy"})
   end
 end)
 
-TriggerClientEvent("mineradima")
+RegisterServerEvent("mineradima")
 AddEventHandler("mineradima", function()
   local source = source
   local user_id = vRP.getUserId({source})
-  
+  local player = vRP.getUserSource({user_id})
   if vRP.hasGroup({user_id, "user"}) then
 	vRP.addUserGroup({user_id, "Minerador Diamante"})
-	vRPclient._notify(source, {"Agora você é um Minerador de Diamantes"})
+	vRPclient._notify(player, {"Agora você é um Minerador de Diamantes"})
   end
 end)
 
-TriggerClientEvent("mineraouro")
+RegisterServerEvent("mineraouro")
 AddEventHandler("mineraouro", function()
   local source = source
   local user_id = vRP.getUserId({source})
-  
+  local player = vRP.getUserSource({user_id})
   if vRP.hasGroup({user_id, "user"}) then
 	vRP.addUserGroup({user_id, "Minerador Ouro"})
-	vRPclient._notify(source, {"Agora você é um Minerador de Ouro"})
+	vRPclient._notify(player, {"Agora você é um Minerador de Ouro"})
   end
 end)
 
-TriggerClientEvent("mineracobre")
+RegisterServerEvent("mineracobre")
 AddEventHandler("mineracobre", function()
   local source = source
   local user_id = vRP.getUserId({source})
-  
+  local player = vRP.getUserSource({user_id})
   if vRP.hasGroup({user_id, "user"}) then
 	vRP.addUserGroup({user_id, "Minerador Cobre"})
-	vRPclient._notify(source, {"Agora você é um Minerador de Cobre"})
+	vRPclient._notify(player, {"Agora você é um Minerador de Cobre"})
   end
 end)
 
---[[TriggerClientEvent("cacador")
+--[[RegisterServerEvent("cacador")
 AddEventHandler("cacador", function()
   local source = source
   local user_id = vRP.getUserId({source})
@@ -138,7 +136,7 @@ AddEventHandler("cacador", function()
   end
 end)--]]
 
---[[TriggerClientEvent("caminhoneiro")
+--[[RegisterServerEvent("caminhoneiro")
 AddEventHandler("caminhoneiro", function()
   local source = source
   local user_id = vRP.getUserId({source})

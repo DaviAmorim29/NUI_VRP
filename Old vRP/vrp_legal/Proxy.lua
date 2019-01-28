@@ -1,8 +1,6 @@
+-- PROXY CLIENT-SIDE VERSION (https://github.com/ImagicTheCat/vRP)
 -- Proxy interface system, used to add/call functions between resources
-
-local Debug = module("lib/Debug")
-
-local Proxy = {}
+Proxy = {}
 
 local proxy_rdata = {}
 local function proxy_callback(rvalues) -- save returned values, TriggerEvent is synchronous
@@ -29,21 +27,13 @@ end
 --- Add event handler to call interface functions (can be called multiple times for the same interface name with different tables)
 function Proxy.addInterface(name, itable)
   AddEventHandler(name..":proxy",function(member,args,callback)
-    if Debug.active then
-      Debug.pbegin("proxy_"..name..":"..member.." "..json.encode(Debug.safeTableCopy(args)))
-    end
-
     local f = itable[member]
 
     if type(f) == "function" then
       callback({f(table.unpack(args))}) -- call function with and return values through callback
       -- CancelEvent() -- cancel event doesn't seem to cancel the event for the other handlers, but if it does, uncomment this
     else
-      print("error: proxy call "..name..":"..member.." not found")
-    end
-
-    if Debug.active then
-      Debug.pend()
+      -- print("error: proxy call "..name..":"..member.." not found")
     end
   end)
 end
@@ -53,4 +43,4 @@ function Proxy.getInterface(name)
   return r
 end
 
-return Proxy
+-- END PROXY CLIENT-SIDE VERSION

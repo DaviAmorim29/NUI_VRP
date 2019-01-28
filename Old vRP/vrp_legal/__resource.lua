@@ -29,12 +29,12 @@ files {
 }
 
 client_script {
-   'Proxy.lua',
-  '@vrp/lib/utils.lua',
+'Proxy.lua',
   'click.lua',
 }
 
 server_script {
+'Proxy.lua',
   '@vrp/lib/utils.lua',
   'server.lua'
 }

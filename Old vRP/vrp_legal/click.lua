@@ -1,9 +1,4 @@
-local Tunnel = module("vrp", "lib/Tunnel")
-local Proxy = module("vrp", "lib/Proxy")
-
 vRP = Proxy.getInterface("vRP")
-vRPclient = Tunnel.getInterface("vRP")
-JBserver = Tunnel.getInterface("vrp_legal","vrp_legal")
 
 local menuEnabled = false
 
@@ -60,57 +55,57 @@ Citizen.CreateThread(function ()
 end)
 
 RegisterNUICallback('desempregado', function(data, cb)
-	TriggerClientEvent("desempregado")
+	TriggerServerEvent("desempregado")
   	cb('ok')
 end)
 
 RegisterNUICallback('pescador', function(data, cb)
-	TriggerClientEvent("pescador")
+	TriggerServerEvent("pescador")
   	cb('ok')
 end)
 
 RegisterNUICallback('taxi', function(data, cb)
-	TriggerClientEvent("taxi")
+	TriggerServerEvent("taxi")
   	cb('ok')
 end)
 
 RegisterNUICallback('mecanico', function(data, cb)
-	TriggerClientEvent("mecanico")
+	TriggerServerEvent("mecanico")
   	cb('ok')
 end)
 
 RegisterNUICallback('transportador', function(data, cb)
-	TriggerClientEvent("transportador")
+	TriggerServerEvent("transportador")
   	cb('ok')
 end)
 
 RegisterNUICallback('onibus', function(data, cb)
-	TriggerClientEvent("onibus")
+	TriggerServerEvent("onibus")
   	cb('ok')
 end)
 
 RegisterNUICallback('eletricista', function(data, cb)
-	TriggerClientEvent("eletricista")
+	TriggerServerEvent("eletricista")
   	cb('ok')
 end)
 
 RegisterNUICallback('motoboy', function(data, cb)
-	TriggerClientEvent("motoboy")
+	TriggerServerEvent("motoboy")
   	cb('ok')
 end)
 
 RegisterNUICallback('mineradima', function(data, cb)
-	TriggerClientEvent("mineradima")
+	TriggerServerEvent("mineradima")
   	cb('ok')
 end)
 
 RegisterNUICallback('mineraouro', function(data, cb)
-	TriggerClientEvent("mineraouro")
+	TriggerServerEvent("mineraouro")
   	cb('ok')
 end)
 
 RegisterNUICallback('mineracobre', function(data, cb)
-	TriggerClientEvent("mineracobre")
+	TriggerServerEvent("mineracobre")
   	cb('ok')
 end)
 

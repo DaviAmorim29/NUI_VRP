@@ -17,15 +17,24 @@ files {
 		 "nui/img/logo.png",
 		 "nui/empregos.html",
 		 "nui/style-job.css",
+		 "nui/img/cacador.png",
+		 "nui/img/caminhao.png",
+		 "nui/img/onibus.png",
+		 "nui/img/mecanico.jpg",
+		 "nui/img/taxi.jpg",
+		 "nui/img/sedex.png",
+		 "nui/img/pescador.png",
+		 "nui/img/caminhao2.png",
+		 "nui/img/transportador.png",
 }
 
 client_script {
-   'Proxy.lua',
-  '@vrp/lib/utils.lua',
+'Proxy.lua',
   'click.lua',
 }
 
 server_script {
+'Proxy.lua',
   '@vrp/lib/utils.lua',
   'server.lua'
 }

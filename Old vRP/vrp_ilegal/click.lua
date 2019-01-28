@@ -1,14 +1,4 @@
--- ###################################
---
---       Credits: Shadow
---
--- ###################################
-local Tunnel = module("vrp", "lib/Tunnel")
-local Proxy = module("vrp", "lib/Proxy")
-
 vRP = Proxy.getInterface("vRP")
-vRPclient = Tunnel.getInterface("vRP")
-JBserver = Tunnel.getInterface("vrp_ilegal","vrp_ilegal")
 
 local menuEnabled = false
 
@@ -65,27 +55,27 @@ Citizen.CreateThread(function ()
 end)
 
 RegisterNUICallback('desempregado', function(data, cb)
-	TriggerClientEvent("desempregado")
+	TriggerServerEvent("desempregado")
   	cb('ok')
 end)
 
 RegisterNUICallback('ladraocarro', function(data, cb)
-	TriggerClientEvent("ladraocarro")
+	TriggerServerEvent("ladraocarro")
   	cb('ok')
 end)
 
 RegisterNUICallback('traficante', function(data, cb)
-	TriggerClientEvent("traficante")
+	TriggerServerEvent("traficante")
   	cb('ok')
 end)
 
 RegisterNUICallback('traficatortuga', function(data, cb)
-	TriggerClientEvent("traficatortuga")
+	TriggerServerEvent("traficatortuga")
   	cb('ok')
 end)
 
 RegisterNUICallback('hacker', function(data, cb)
-	TriggerClientEvent("hacker")
+	TriggerServerEvent("hacker")
   	cb('ok')
 end)
 
